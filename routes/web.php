@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/weather', 'WeatherController@getWeather');
+Route::get('/orders', 'OrderController@getorders');
+Route::get('/order/{id}', 'OrderController@editOrder');
+Route::post('/saveOrder/{id}', 'OrderController@saveOrder');
